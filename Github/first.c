@@ -14,12 +14,10 @@ int main() {
     scanf("%f", &a);
     printf("Enter the number of intervals: ");
     scanf("%d", &n);
-
     if (n <= 0) {
         printf("Number of intervals must be greater than zero.\n");
         return 1;
     }
-
     h = (b - a) / n;
 
     float x[n + 1], y[n + 1];
@@ -33,7 +31,6 @@ int main() {
     for (i = 1; i < n; i++) {
         sum += 2 * y[i];
     }
-    
     val = (h / 2) * sum;
 
     printf("Integral value using Trapezoidal Rule: %f\n", val);
